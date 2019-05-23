@@ -66,21 +66,22 @@ detectDayBudget();
 
 function detectLevel() {
 
+    if (appData.moneyPerDay < 100) {
+        console.log("Это минимальный уровень достатка!");
+    } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+        console.log("Это средний уровень достатка!");
+    } else if (appData.moneyPerDay >= 2000) {
+        console.log("Это высокий уровень достатка!");
+    } else {
+        console.log("Произошла ошибка");
+    }
 }
 
+detectLevel();
+// appData.moneyPerDay = Math.round(appData.budget / 30);
 
-appData.moneyPerDay = Math.round(appData.budget / 30);
 
 
 
-if (appData.moneyPerDay < 100) {
-    console.log("Это минимальный уровень достатка!");
-} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-    console.log("Это средний уровень достатка!");
-} else if (appData.moneyPerDay >= 2000) {
-    console.log("Это высокий уровень достатка!");
-} else {
-    console.log("Произошла ошибка");
-}
 
 
