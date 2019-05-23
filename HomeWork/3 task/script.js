@@ -55,15 +55,23 @@ checkSavings();
 // Расчет дневного бюджета
 
 function detectDayBudget() {
-    
+    appData.moneyPerDay = Math.round(appData.budget / 30);
     //appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
+}
+
+detectDayBudget();
+
+// блок кода с расчетом уровня достатка 
+
+function detectLevel() {
+
 }
 
 
-
-
 appData.moneyPerDay = Math.round(appData.budget / 30);
-alert("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
+
+
 
 if (appData.moneyPerDay < 100) {
     console.log("Это минимальный уровень достатка!");
