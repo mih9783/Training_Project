@@ -32,8 +32,6 @@ myNumber(function () {
     console.log(3);
 });
 
-
-
 myDinner(' Рис ', ' Курица ', function () {
     alert('Я закончил обедать.');
 });
