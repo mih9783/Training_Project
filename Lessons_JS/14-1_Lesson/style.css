@@ -3,7 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wrap.title {
+  text-align: center;
+  padding: 3rem;
+}
 ul li {
   margin: 1rem;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.wrap .text {
+  margin: 2rem;
   font-size: 1.2rem;
 }
