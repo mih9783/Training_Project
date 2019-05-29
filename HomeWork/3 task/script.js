@@ -32,20 +32,21 @@ let appData = {
             i--;
         }
     }
-    }
-};
-
-// Ежемесячный доход с депозита
-
-function checkSavings() {
-    if (appData.savings == true) {
+    },
+    checkSavings: function() {
+      if (appData.savings == true) {
         let save = +prompt("Какова сумма накоплений ?", "");
         let percent = +prompt("Под какой процент ?", "");
 
         appData.monthIncome = Math.round(save / 100 / 12 * percent);
         alert("Месячный доход с вашего депозита составляет: " + appData.monthIncome + " руб.");
     }
-}
+    },
+};
+
+// Ежемесячный доход с депозита
+
+ 
 
 checkSavings();
 
