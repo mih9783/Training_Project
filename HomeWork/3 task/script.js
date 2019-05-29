@@ -17,11 +17,9 @@ let appData = {
     optionalExpenses: {},
     income: [],
     timeData: time,
-    savings: true
-};
-
-function chooseExpenses() {
-    for (let i = 0; i < 2; i++) {
+    savings: true,
+    chooseExpenses: function() {
+      for (let i = 0; i < 2; i++) {
         let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
             b = prompt("Во сколько обойдется?", "");
 
@@ -34,9 +32,8 @@ function chooseExpenses() {
             i--;
         }
     }
-}
-
-chooseExpenses();
+    }
+};
 
 // Ежемесячный доход с депозита
 
