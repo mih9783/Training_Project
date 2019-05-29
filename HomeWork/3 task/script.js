@@ -42,23 +42,16 @@ let appData = {
         alert("Месячный доход с вашего депозита составляет: " + appData.monthIncome + " руб.");
     }
     },
+    detectDayBudget: function() {
+      appData.moneyPerDay = Math.round(appData.budget / 30);
+      //appData.moneyPerDay = (appData.budget / 30).toFixed();
+      alert("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
+    }
 };
 
 // Ежемесячный доход с депозита
 
- 
-
-checkSavings();
-
 // Расчет дневного бюджета
-
-function detectDayBudget() {
-    appData.moneyPerDay = Math.round(appData.budget / 30);
-    //appData.moneyPerDay = (appData.budget / 30).toFixed();
-    alert("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
-}
-
-detectDayBudget();
 
 // блок кода с расчетом уровня достатка 
 
