@@ -46,18 +46,9 @@ let appData = {
       appData.moneyPerDay = Math.round(appData.budget / 30);
       //appData.moneyPerDay = (appData.budget / 30).toFixed();
       alert("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
-    }
-};
-
-// Ежемесячный доход с депозита
-
-// Расчет дневного бюджета
-
-// блок кода с расчетом уровня достатка 
-
-function detectLevel() {
-
-    if (appData.moneyPerDay < 100) {
+    },
+    detectLevel: function() {
+      if (appData.moneyPerDay < 100) {
         console.log("Это минимальный уровень достатка!");
     } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
         console.log("Это средний уровень достатка!");
@@ -66,9 +57,14 @@ function detectLevel() {
     } else {
         console.log("Произошла ошибка");
     }
-}
+    },
+};
 
-detectLevel();
+// Ежемесячный доход с депозита
+
+// Расчет дневного бюджета
+
+// блок кода с расчетом уровня достатка 
 
 // функцию для определения необязательных расходов 
 
