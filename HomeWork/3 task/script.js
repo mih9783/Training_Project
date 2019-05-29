@@ -58,6 +58,13 @@ let appData = {
         console.log("Произошла ошибка");
     }
     },
+    chooseOptExpenses: function() {
+      for (let i = 1; i <= 3; i++) {
+          let questionOptExpenses = prompt("Статья необязательных расходов?");
+          appData.optionalExpenses[i] = questionOptExpenses;
+          console.log(appData.optionalExpenses);
+      }
+  }
 };
 
 // Ежемесячный доход с депозита
@@ -68,15 +75,6 @@ let appData = {
 
 // функцию для определения необязательных расходов 
 
-function chooseOptExpenses() {
-    for (let i = 1; i <= 3; i++) {
-        let questionOptExpenses = prompt("Статья необязательных расходов?");
-        appData.optionalExpenses[i] = questionOptExpenses;
-        console.log(appData.optionalExpenses);
-    }
-}
-
-chooseOptExpenses();
 // appData.moneyPerDay = Math.round(appData.budget / 30);
 
 
