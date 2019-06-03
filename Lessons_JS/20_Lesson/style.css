@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 960px;
+  margin: 5rem auto;
+  border: 4px solid rgb(175, 39, 39);
+  padding: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: blue;
+}
+.btn_class,
+#btn,
+button {
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  border: 4px solid rgb(175, 39, 39);
+  display: block;
+  font-size: 1.3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+body h1 {
+  display: block;
+  margin-left: 29rem;
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(238, 36, 36);
+}
+
+
