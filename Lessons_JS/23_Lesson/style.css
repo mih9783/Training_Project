@@ -1,0 +1,46 @@
+.container {
+  margin: 2rem auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: rgb(134, 235, 139);
+}
+
+.anime {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: crimson;
+}
+
+.wrap {
+    width: 95%;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    background-color: rgb(179, 169, 169);
+}
+
+.btn, .first {
+    height: 2rem;
+    width: 8%;
+    margin: 0 0.8%;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    background-color: rgb(241, 245, 29);
+}
+
+.block {
+    width: 400px;
+    height: 150px;
+    margin: 3rem auto;
+    border: 5px solid rgb(100, 219, 164);
+}
+
+.blocks {
+    width: 400px;
+    height: 150px;
+    margin: 3rem auto;
+    border: 5px solid rgba(248, 89, 214, 0.904);
+}
