@@ -1,4 +1,3 @@
-console.log(333);
 let button = document.getElementsByTagName("button"),
   wrap = document.querySelector(".wrap"),
   link = document.querySelector("a"),
