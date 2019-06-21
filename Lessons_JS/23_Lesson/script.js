@@ -269,32 +269,6 @@ wrapBtn2.addEventListener("click", function(event) {
 
 //  делегирование  для абсолютно разных действий
 
-function Menu(elem) {
-    this.save = function() {
-      alert( "сохраняю" );
-    };
-    this.load = function() {
-      alert( "загружаю" );
-    };
-    this.search = function() {
-      alert( "ищу" );
-    };
-
-    var self = this;
-
-    elem.onclick = function(e) {
-      var target = e.target;
-      var action = target.getAttribute("data-action");
-      if (action) {
-        self[action]();
-      }
-    };
-  }
-
-  new Menu(menu);
-
-  //++++++++++++++++++++
-
 let menuBtn = document.querySelector(".menu");
 
 menuBtn.addEventListener("click", function(event) {
