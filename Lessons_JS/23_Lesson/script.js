@@ -6,7 +6,7 @@ function myTimer() {
 
 setTimeout(myTimer, 2000);
 
-// 1 VARIANT
+// 2 VARIANT
 
 setTimeout(function () {
   console.log("Hello !!!!!");
@@ -43,12 +43,12 @@ var timerId = setInterval(function () {
 // через 5 сек остановить повторы
 setTimeout(function () {
   clearInterval(timerId);
-  console.log('стоп');
+  console.log("стоп");
 }, 5000);
 
 //  рекурсивный setTimeout
 
-/** вместо:
+/* вместо:
 var timerId = setInterval(function() {
   alert( "тик" );
 }, 2000);
@@ -60,6 +60,15 @@ var timerId = setInterval(function() {
 //   console.log( "тик" );
 //   timerId = setTimeout(tick, 2000);
 // }, 2000);
+
+// ИЛИ ТОЖЕ РЕКУРСИВНЫЙ
+
+// let timId = setTimeout(function logFn() {
+//     console.log("tick-tack");
+//     setTimeout(logFn,2000);
+// });
+
+// ============
 
 // ОСТАНОВКА РЕКУРСИВНОЙ SETTIMEOUT  через if
 
@@ -82,7 +91,7 @@ let tT = setTimeout(function Fntick() {
 
 */
 function timer() {
-  var elem = document.getElementById('test'); //получаем наш инпут
+  var elem = document.getElementById("test"); //получаем наш инпут
   elem.value = parseInt(elem.value) + 1; //увеличиваем значение атрибута на единицу
 
   if (elem.value < 10) { //если в инпуте меньше 10-ти - то работаем дальше
@@ -226,17 +235,19 @@ function borderFn() {
     clearTimeout(mybdr);
  }
 
- // (жёлтые кнопки) делегирование событий
+ //  ДЕЛЕГИРОВАНИЕ СОБЫТИЙ (жёлтые кнопки) 
 
  let wrapBtn = document.querySelector(".wrap-btn");
  let wrapBtn1 = document.querySelector(".wrap-btn1");
  let wrapBtn2 = document.querySelector(".wrap-btn2");
  let btnD = document.getElementsByTagName("button");
 
- // в if проверяем еси пользователь кликнул по кнопке
+ // в if проверяем если пользователь кликнул по кнопке
  wrapBtn.addEventListener("click", function(event) {
      if (event.target && event.target.tagName == "BUTTON") {
          console.log("это кнопка");
+     } else {
+         console.log("Вы кликнули не по кнопке");
      }
  });
 
@@ -256,4 +267,47 @@ wrapBtn2.addEventListener("click", function(event) {
     }
 });
 
+//  делегирование  для абсолютно разных действий
+
+function Menu(elem) {
+    this.save = function() {
+      alert( "сохраняю" );
+    };
+    this.load = function() {
+      alert( "загружаю" );
+    };
+    this.search = function() {
+      alert( "ищу" );
+    };
+
+    var self = this;
+
+    elem.onclick = function(e) {
+      var target = e.target;
+      var action = target.getAttribute("data-action");
+      if (action) {
+        self[action]();
+      }
+    };
+  }
+
+  new Menu(menu);
+
+  //++++++++++++++++++++
+
+let menuBtn = document.querySelector(".menu");
+
+menuBtn.addEventListener("click", function(event) {
+    if (event.target && event.target.matches("button.btn-save")) {
+        alert( "сохраняю" );
+    }
+
+    if (event.target && event.target.matches("button.btn-load")) {
+        alert( "загружаю" );
+    }
+
+    if (event.target && event.target.matches("button.btn-search")) {
+        alert( "ищу" );
+    }
+});
 

@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>23 урок setTimeout</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23 урок setTimeout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>23 урок setTimeout(), setInterval()</h1>
-<!-- Трепачёв -->
-<h2>Трепачёв</h2>
-<input type="text" value="1" id="test">
-<input type="submit" value="start" onclick="timer()">
-<hr>
-<!-- END Трепачёв -->
+    <h1>23 урок setTimeout(), setInterval()</h1>
+    <!-- Трепачёв -->
+    <h2>Трепачёв</h2>
+    <input type="text" value="1" id="test">
+    <input type="submit" value="start" onclick="timer()">
+    <hr>
+    <!-- END Трепачёв -->
 
-<!-- интернет -->
+    <!-- интернет -->
 
-<button onclick="startCount()">Start count!</button>
-<input type="text" id="txt">
-<button onclick="stopCount()">Stop count!</button>
+    <button onclick="startCount()">Start count!</button>
+    <input type="text" id="txt">
+    <button onclick="stopCount()">Stop count!</button>
 
-<!-- интернет end -->
+    <!-- интернет end -->
 
-<!-- anime -->
+    <!-- anime -->
 
 
-<hr>
-<button class="btn" id="btn">анимация</button>
+    <hr>
+    <button class="btn" id="btn">анимация</button>
     <div class="container">
-      <div class="anime">
+        <div class="anime">
 
-      </div>
+        </div>
     </div>
+
+
+    <!-- от шефа -->
+    <hr>
+    Счётчик: <span id="countTime"></span>
+    <br />
+    <a href="javascript:startCount()">3anycтить процесс</a>
+    <br />
+    <a href="javascript:stopCount()">Остановить процесс</a>
+    <hr>
+    <hr>
+    <hr>
+    <h2 class="text"></h2>
+    <hr>
+    <hr>
+    <hr>
+    <button class="btn timeout"></button>
+    <div class="block"></div>
+
+    <!-- ДЕЛЕГИРОВАНИЕ СОБЫТИЙ -->
+
+    <h1 style="margin-bottom: 4rem; margin-top: 5rem; margin-left: 25rem;">Делегирование событий</h1>
+
+    <h2>
+        Всплытие событий позволяет реализовать один из самых важных приёмов разработки – делегирование.
+    </h2>
+
+    <h2>
+        Он заключается в том, что если у нас есть много элементов, события на которых нужно обрабатывать похожим
+        образом, то вместо того, чтобы назначать обработчик каждому – мы ставим один обработчик на их общего предка. Из
+        него можно получить целевой элемент event.target, понять на каком именно потомке произошло событие и обработать
+        его.
+
+    </h2>
+
 
     <div class="wrap wrap-btn">
         <button class="btn btn-first"></button>
@@ -74,19 +111,79 @@
         <button class="btn"></button>
     </div>
 
-    <!-- от шефа -->
-<hr>
-    Счётчик: <span id="countTime"></span>
-<br />
-<a href="javascript:startCount()">3anycтить процесс</a>
-<br />
-<a href="javascript:stopCount()">Остановить процесс</a>
-<hr><hr><hr>
-<h2 class = "text"></h2>
-<hr><hr><hr>
-<button class="btn timeout"></button>
-<div class="block"></div>
+    <hr>
+<h2> делегирование  для абсолютно разных действий.</h2>
+    <div id="menu">
+        <button class="btn" data-action="save">Сохранить</button>
+        <button class="btn" data-action="load">Загрузить</button>
+        <button class="btn" data-action="search">Поиск</button>
+    </div>
 
-  <script src="script.js"></script>
+    <hr>
+
+    <div class="menu">
+            <button class="btn btn-save" data-action="save">Сохранить</button>
+            <button class="btn btn-load" data-action="load">Загрузить</button>
+            <button class="btn btn-search" data-action="search">Поиск</button>
+        </div>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th colspan="3"><em>Bagua</em> Chart: Direction, Element, Color, Meaning</th>
+        </tr>
+        <tr>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+        </tr>
+        <tr>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+        </tr>
+        <tr>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+            <td>...<strong>Northwest</strong>...</td>
+        </tr>
+        <!-- <tr>...еще 2 строки такого же вида...</tr>
+    <tr>...еще 2 строки такого же вида...</tr> -->
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>
+        Одним из горячих методологий в мире JavaScript является делегирование событий, и по уважительной причине.
+        Делегация событий позволяет избежать добавления слушателей событий к определенным узлам; вместо этого,
+        добавляется прослушиватель событий к одному из родителей. Это событие слушатель анализирует ое событие , чтобы
+        найти спичку на дочерних элементах. Базовая концепция довольно проста , но многие люди не понимают, как работает
+        событие делегация. Позвольте мне объяснить , как работает делегирование мероприятия и обеспечить чистый пример
+        JavaScript базового делегирования событий.
+    </h2>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

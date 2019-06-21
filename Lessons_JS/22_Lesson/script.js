@@ -30,6 +30,37 @@ window.addEventListener("DOMContentLoaded", function() {
   
 });
 
+//СО страницы ссылки к 22 уроку
+
+window.addEventListener('load', function(){
+  
+    var box1 = document.getElementById('box1');
+    var statusdiv = document.getElementById('statusdiv');
+    var startx = 0;
+    var dist = 0;
+  
+    box1.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]; // первая точка прикосновения
+        startx = parseInt(touchobj.clientX); // положение точки касания по x, относительно левого края браузера
+        statusdiv.innerHTML = 'Status: touchstart ClientX: ' + startx + 'px';
+        e.preventDefault();
+    }, false)
+  
+    box1.addEventListener('touchmove', function(e){
+        var touchobj = e.changedTouches[0]; // первая точка прикосновения для данного события
+        var dist = parseInt(touchobj.clientX) - startx;
+        statusdiv.innerHTML = 'Событие: touchmove Гориз. перемещение: ' + dist + 'px';
+        e.preventDefault();
+    }, false);
+  
+    box1.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]; // первая точка прикосновения для данного события
+        statusdiv.innerHTML = 'Событие: touchend Координаты точки x: ' + touchobj.clientX + 'px';
+        e.preventDefault();
+    }, false);
+  
+}, false);
+
 // РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ
 
 // let ans = prompt("ВведитеВаше имя", "");
