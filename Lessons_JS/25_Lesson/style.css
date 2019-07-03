@@ -1,0 +1,45 @@
+body {
+    background-color: lemonchiffon;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.box {
+    width: 400px;
+    height: 350px;
+    margin: 5rem auto 2rem auto;
+    overflow: scroll;
+    background-color: linen;
+    padding-top: 50px;
+    padding: 10px;
+}
+
+.box1,.box2 {
+    width: 400px;
+    height: 350px;
+    margin: 5rem auto 2rem auto;
+    overflow: scroll;
+    background-color: linen;
+    text-align: left;
+    padding-top: 50px;
+    padding: 10px;
+}
+
+.box3,.box4 {
+    width: 400px;
+    height: 350px;
+    margin: 5rem auto 2rem auto;
+    overflow: scroll;
+    background-color: linen;
+    text-align: left;
+    padding-top: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+}
