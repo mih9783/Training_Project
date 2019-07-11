@@ -40,7 +40,8 @@ window.addEventListener("DOMContentLoaded", function() {
     // таймер
 
     let deadline = "2020-01-31";
-
+    
+    // remaining - оставшийся
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date());
         // Date.parse(endtime) - это конечная дата
@@ -51,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function() {
         let minutes = Math.floor((t / 1000 / 60) % 60);
         let hours = Math.floor((t / (1000 * 60 * 60)));
         // это количество дней
-        //let hours = Math.floor((t / 1000 / 60 / 60) % 24);
+        //let hours = Math.floor((t / 1000 / 60 / 60) % 24); получим хвостик с часами
         //let days = Math.floor((t / (1000 / 60 / 60 * 24));
 
         return {
@@ -72,7 +73,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
         function updateClock() {
             let t = getTimeRemaining(endtime);
-
+// чтобы цыфры до десятки были с нулями
             function addNull(num){
                 if(num <= 9) {
                     return "0" + num;
