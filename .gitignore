@@ -10,9 +10,6 @@
 # log
 *.log
 
-# img
-*img
-
 # Linker output
 *.ilk
 *.map
