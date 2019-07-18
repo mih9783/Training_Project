@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(188, 226, 238);
+}
+
+button {
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    margin-top: 9rem;
+    margin-left: 14rem;
+    border-radius: 0.6rem;
+    outline: none;
+    background-color: aliceblue;
+}
