@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function() {
 
     "use strict";
-    // табы
+    // табы  ///////
 
     let tab = document.querySelectorAll(".info-header-tab"),
         info = document.querySelector(".info-header"),
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     });
 
-    // таймер
+    // таймер ///////
 
     let deadline = "2020-01-31";
     
@@ -97,7 +97,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     setClock("timer", deadline);
 
-    // модальное окно (modal)
+    // модальное окно (modal)  /////
 
     let more = document.querySelector(".more"),
         overlay = document.querySelector(".overlay"),
@@ -115,6 +115,8 @@ window.addEventListener("DOMContentLoaded", function() {
             document.body.style.overflow = "";// запрет прокрутки страницы   
         });
 
+        // Form  ////
 
+        
         
 });
