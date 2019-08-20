@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(210, 241, 236);
+}
+.tabs__content {
+	display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+	display: block; /* по умолчанию показываем нужный блок */
+}
+
+.tabs__caption li {
+    cursor: pointer;
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+
+
+/* Progress*/
+.progress-top,
+.progress-right,
+.progress-bottom,
+.progress-left {
+  position: fixed;
+  z-index: 999;
+
+  background-color: #ffc769;
+}
+
+.progress-top,
+.progress-bottom {
+  height: 0.35em;
+}
+
+.progress-right,
+.progress-left {
+  width: 0.15em;
+}
+
+.progress-top,
+.progress-right {
+  top: 0;
+}
+
+.progress-top,
+.progress-left {
+  left: 0;
+}
+
+.progress-bottom,
+.progress-left {
+  bottom: 0;
+}
+
+.progress-bottom,
+.progress-right {
+  right: 0;
+}
+
+/* Main*/
+main {
+  height: 700px;
+}
+
+
