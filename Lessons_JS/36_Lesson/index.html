@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>36 lesson promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+
+    <h2>Что такое Promise?</h2>
+
+    <p>
+        Promise – это специальный объект, который содержит своё состояние. Вначале pending («ожидание»), затем – одно из: fulfilled («выполнено успешно») или rejected («выполнено с ошибкой»).
+    </p>
+
+    <h3>
+        На promise можно навешивать коллбэки двух типов:
+    </h3>
+    <ul>
+        <li>onFulfilled – срабатывают, когда promise в состоянии «выполнен успешно».</li>
+        <li>onRejected – срабатывают, когда promise в состоянии «выполнен с ошибкой».</li>
+    </ul>
+
+    <h3>
+        Способ использования, в общих чертах, такой:
+    </h3>
+
+    <ul>
+        <li>
+            1. Код, которому надо сделать что-то асинхронно, создаёт объект promise и возвращает его.
+
+        </li>
+        <li>
+            2. Внешний код, получив promise, навешивает на него обработчики.
+
+        </li>
+        <li>
+            3. По завершении процесса асинхронный код переводит promise в состояние fulfilled (с результатом) или rejected (с ошибкой). 
+            <br> При этом автоматически вызываются соответствующие обработчики во внешнем коде.
+        </li>
+    </ul>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
